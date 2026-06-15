@@ -1,27 +1,19 @@
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
-; but it is possible to edit it. Be very careful if you do.
-
-config_version=5
+; since the parameters that go here are tool-specific and
+; may change when when edited by the editor.
 
 [application]
 
-config/name="Blockass"
-config/description="Voxel battle royale game with Fortnite mechanics"
-config/version="0.1.0"
-config/author="editortiktok303-ops"
-config/window_stretch/mode="canvas_items"
-config/auto_reload_scripts=true
-
-[rendering]
-
-renderer/rendering_method="forward_plus"
-textures/vram_compression/import_etc2_astc=true
+config/name="Car Racing Game"
+config/version="1.0.0"
+run/main_scene="res://scenes/MainMenu.tscn"
+config/features=PackedStringArray("4.1")
 
 [physics]
 
-3d/default_gravity=9.8
+2d/default_gravity=0
 
-[network]
+[rendering]
 
-multiplayer/multiplayer_poll/active=true
+textures/canvas_textures/default_texture_filter=0

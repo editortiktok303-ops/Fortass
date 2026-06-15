@@ -1,64 +1,86 @@
-# Blockass
-
-A voxel-based battle royale game combining Minecraft's block system with Fortnite's gameplay mechanics.
+# Nitro Racer - Complete Godot Car Racing Game
 
 ## Features
 
-- **Voxel World**: Procedurally generated block-based terrain
-- **Building System**: Place, destroy, and rotate blocks in real-time
-- **Combat**: Multiple weapons, ammo, and damage system
-- **Battle Royale**: Shrinking play zone, looting, survival
-- **Multiplayer**: Network-ready architecture (Godot multiplayer)
-- **Inventory System**: Backpack, equipment, consumables
-- **Dynamic Map**: Destructible environment, resource gathering
-- **Player Progression**: Stats, cosmetics, loadouts
+✅ **Full Car Physics**
+- Smooth acceleration and deceleration
+- Realistic car rotation
+- Speed limits and friction
 
-## Engine
+✅ **Nitro Boost System**
+- Press SPACE to activate nitro
+- Temporary speed boost
+- Recharges automatically when not in use
+- Visual nitro meter
 
-- **Godot Engine 4.x**
-- **Language**: GDScript
-- **Recommended Add-ons**: VoxelTools, Godot Voxel Terrain
+✅ **Drifting Mechanics**
+- Automatic drift detection when turning at high speeds
+- Earn money while drifting
+- Drift multiplier for nitro boost
 
-## Project Structure
+✅ **Money & Economy**
+- Earn money by driving
+- Earn bonus money while drifting
+- Track total money earned
+- Persistent save system
 
-```
-Blockass/
-├── scenes/              # Godot scene files
-├── scripts/             # GDScript source code
-├���─ assets/              # Art, textures, sounds
-├── project.godot        # Godot project config
-└── docs/                # Documentation
-```
+✅ **Vehicle Upgrades**
+- Max Speed Upgrade: Increase your top speed
+- Acceleration Upgrade: Faster acceleration
+- Nitro Capacity Upgrade: Larger nitro tank
+- Upgrades scale in cost with each level purchased
+- Persistent progress saving
 
-## Quick Start
+✅ **Complete UI**
+- Main menu with play/upgrades/quit options
+- In-game HUD with money, speed, and nitro display
+- Upgrades shop
+- Visual progress bars and indicators
 
-1. Open Godot 4.x
+## How to Play
+
+### Controls
+- **W/Up Arrow** - Accelerate forward
+- **S/Down Arrow** - Reverse
+- **A/D / Left/Right Arrows** - Steer
+- **SPACE** - Activate Nitro Boost
+- **Escape** - Back to menu
+
+### Gameplay
+1. Start a race and drive around the track
+2. Earn money by driving fast
+3. Earn bonus money by drifting (turning at high speed)
+4. Use nitro boost (SPACE) for speed bursts
+5. Return to the menu to spend money on upgrades
+6. Upgrade your car's max speed, acceleration, and nitro capacity
+7. Progress through levels and earn more money!
+
+## Game Files
+
+- **scenes/MainMenu.tscn** - Main menu scene
+- **scenes/Game.tscn** - Main racing scene with car and track
+- **scenes/UpgradesShop.tscn** - Upgrades and shop UI
+- **scripts/MainMenu.gd** - Menu logic
+- **scripts/Game.gd** - Game scene manager
+- **scripts/Car.gd** - Car physics, controls, and progression
+- **scripts/UpgradesShop.gd** - Upgrade purchasing logic
+- **project.godot** - Project configuration
+
+## Save System
+
+Your progress is automatically saved to `user://car_data.cfg`:
+- Current money
+- Speed upgrade level
+- Acceleration upgrade level
+- Nitro capacity level
+
+Progress persists between sessions!
+
+## Installation
+
+1. Open Godot 4.1+
 2. Import this project
-3. Install VoxelTools addon
-4. Run the game (F5)
+3. Click "Play" or press F5 to start
+4. Enjoy!
 
-## Development Roadmap
-
-- [x] Project setup
-- [ ] Voxel terrain generation
-- [ ] Block placement/destruction
-- [ ] Player controller & movement
-- [ ] Weapon system
-- [ ] Inventory management
-- [ ] Damage & health system
-- [ ] Battle royale zone system
-- [ ] Multiplayer networking
-- [ ] UI/HUD systems
-- [ ] Audio system
-- [ ] Procedural world generation
-- [ ] Loot spawning
-- [ ] Game loop (spawn, play, end)
-- [ ] Cosmetics & customization
-
-## Contributing
-
-Solo development by editortiktok303-ops
-
-## License
-
-MIT
+No additional setup required - everything is pre-configured and ready to play!
