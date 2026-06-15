@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; but it is possible to edit it. Be very careful if you do.
+
+config_version=5
+
+[application]
+
+config/name="Blockass"
+config/description="Voxel battle royale game with Fortnite mechanics"
+config/version="0.1.0"
+config/author="editortiktok303-ops"
+config/window_stretch/mode="canvas_items"
+config/auto_reload_scripts=true
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
+textures/vram_compression/import_etc2_astc=true
+
+[physics]
+
+3d/default_gravity=9.8
+
+[network]
+
+multiplayer/multiplayer_poll/active=true

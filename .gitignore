@@ -1,0 +1,53 @@
+# Godot-specific ignores
+.godot/
+*.import
+*.translation
+*.pot
+*.gd.remap
+*.tres~
+*.tres.remap
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# Build artifacts
+bin/
+build/
+dist/
+*.o
+*.a
+*.lib
+*.so
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Editor backups
+*.backup
+*.bak
+*.autosave
+
+# Game builds
+export/
+*.exe
+*.zip
