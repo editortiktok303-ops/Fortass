@@ -13,13 +13,14 @@ func apply_damage(target: CharacterBody3D, damage: float, damage_type: String = 
 				target.take_damage(damage)
 
 func create_explosion(position: Vector3, radius: float, damage: float):
-	var space_state = get_world_3d().direct_space_state
-	var query = PhysicsShapeQueryParameters3D.new()
-	query.shape = SphereShape3D.new()
-	query.shape.radius = radius
-	query.transform.origin = position
-	
-	var results = space_state.intersect_shape(query)
-	for result in results:
-		if result.collider is CharacterBody3D:
-			apply_damage(result.collider, damage, "explosive")
+	var space_state = get_tree().get_first_physics_3d_space_state()
+	if space_state:
+		var query = PhysicsShapeQueryParameters3D.new()
+		query.shape = SphereShape3D.new()
+		query.shape.radius = radius
+		query.transform.origin = position
+		
+		var results = space_state.intersect_shape(query)
+		for result in results:
+			if result.collider is CharacterBody3D:
+				apply_damage(result.collider, damage, "explosive")

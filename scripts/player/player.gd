@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-class_name Player
+class_name PlayerCharacter
 
 # Movement
 @export var move_speed = 7.0
@@ -130,12 +130,13 @@ func destroy_block():
 
 
 func get_aim_position() -> Vector3:
-	var space_state = get_world_3d().direct_space_state
-	var query = PhysicsRayQueryParameters3D.create(camera_3d.global_position, camera_3d.global_position + camera_3d.global_transform.basis.z * -build_range)
-	var result = space_state.intersect_ray(query)
-	
-	if result:
-		return result.position
+	var space_state = get_tree().get_first_physics_3d_space_state()
+	if space_state and camera_3d:
+		var query = PhysicsRayQueryParameters3D.create(camera_3d.global_position, camera_3d.global_position + camera_3d.global_transform.basis.z * -build_range)
+		var result = space_state.intersect_ray(query)
+		
+		if result:
+			return result.position
 	return null
 
 func update_velocity():
